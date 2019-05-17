@@ -45,3 +45,15 @@ int main(void){
 	system("pause");
 	return 0;
 }
+int menu(void){
+	int ans;
+	printf("\n");
+	printf("1.Creat friendtable\n");
+	printf("2.find friendtable\n");
+	printf("3.Insertremove\n");
+	printf("4.exit\n");
+	printf("?");
+	scanf("%d",&ans);
+	gerchar();
+	return ans;
+}
