@@ -71,8 +71,30 @@ void  creatfridnetable(struct friend f[]){
 	}
 	else{
 		printf("file counld not be opend\n");
-		
+
 	}
 	fclose(writPtr);
 	return;
+}
+int show(struct Friend f[],int  display){
+	struct stat st;
+	stat("friend.txt",&st);
+	int i=0;
+	FILE *readPtr;
+	readPtr = fopen("friend.txt","r");
+	if(readPtr!=NULL){
+		if(display ==1){
+			printf("name\tphonenumber\taddress\n");
+
+		}
+		if(st.st_size>0){
+			while(!feof(readPtr)){
+				
+fscanf(readPtr."%s%s%s",f[i].name,f[i].phone,f[i].address);
+
+			}
+		i++;
+
+		}
+	}
 }
