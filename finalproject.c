@@ -93,8 +93,13 @@ int show(struct Friend f[],int  display){
 fscanf(readPtr."%s%s%s",f[i].name,f[i].phone,f[i].address);
 
 			}
-		i++;
-
 		}
+		i++;
 	}
+	else{
+		printf("file could not be opened\n");
+
+	}
+	fclose(readPtr);
+	return i;
 }
