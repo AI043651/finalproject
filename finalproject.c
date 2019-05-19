@@ -57,3 +57,22 @@ int menu(void){
 	gerchar();
 	return ans;
 }
+void  creatfridnetable(struct friend f[]){
+	FILE *writePtr;
+	writePtr=fopen("friend.txt","w");
+	if(writePtr !=NULL){
+		int i=0;
+		puts("enter your neme,phone number and address");
+		scanf("%s%s%s",f[i].name,f[i].phone,f[i].address);
+		fprintf(writePtr,"%s%s%s\n",f[i].name,f[i].phone,f[i].address);
+		printf("success to insert a record\n");
+		i+=1;
+
+	}
+	else{
+		printf("file counld not be opend\n");
+		
+	}
+	fclose(writPtr);
+	return;
+}
