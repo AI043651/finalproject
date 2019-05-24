@@ -89,7 +89,7 @@ int show(struct Friend f[],int  display){
 		}
 		if(st.st_size>0){
 			while(!feof(readPtr)){
-				
+
 fscanf(readPtr."%s%s%s",f[i].name,f[i].phone,f[i].address);
 
 			}
@@ -102,4 +102,40 @@ fscanf(readPtr."%s%s%s",f[i].name,f[i].phone,f[i].address);
 	}
 	fclose(readPtr);
 	return i;
+}
+void removdadata(struct Friend f[], int lines){
+	char name2[80];
+	printf("input a  name to Remove:");
+	scanf("%s",name2);
+	int i = 0;
+	int j = 0;
+	int temp;
+	FILE *writePtr;
+	writePtr= fopen("friend.txt","r");
+	if(writePtr!=NULL){
+		while(!feof(writePtr)){
+			stmp= strcmp(name2,f[i].name);
+			if(stmp==0){
+				break;
+			}
+			else{
+				i++;
+			}
+		}
+	}
+	else{
+		printf("file counld not be opened\n");
+
+	}
+	fclose(writePtr);
+	writePrt =fopen("friend.txt","w");
+	for(j=0;j<lines -1;j++){
+		if(i!=j){
+			fprintf(writePtr,"%s %s %s\n",f[j].name,f[j].phone,f[j].address);
+
+		}
+
+	}
+	fclose(writePtr);
+	return;
 }
