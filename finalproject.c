@@ -103,6 +103,22 @@ fscanf(readPtr."%s%s%s",f[i].name,f[i].phone,f[i].address);
 	fclose(readPtr);
 	return i;
 }
+void insert(struct Friend f[]){
+	struct Friend ff;
+	FILE *writePtr;
+	writePtr=fopen("friend.txt","a");
+	if(writepte !=NULL){
+		puts("enter your name,phone number and address");
+		scanf("%s%s%s",ff.name,ff.phone,ff.address);
+		fprintf(writePtr,"%s %s %s\n",ff.name, ff.phone, ff.address);
+		printf("success to insert a record\m");
+	}
+	else{
+		printf("file could not be opend\n");
+	}
+	fclose(readPtr);
+	return i;
+}
 void removdadata(struct Friend f[], int lines){
 	char name2[80];
 	printf("input a  name to Remove:");
