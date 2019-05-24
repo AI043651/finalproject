@@ -111,7 +111,7 @@ void insert(struct Friend f[]){
 		puts("enter your name,phone number and address");
 		scanf("%s%s%s",ff.name,ff.phone,ff.address);
 		fprintf(writePtr,"%s %s %s\n",ff.name, ff.phone, ff.address);
-		printf("success to insert a record\m");
+		printf("success to insert a record\n");
 	}
 	else{
 		printf("file could not be opend\n");
